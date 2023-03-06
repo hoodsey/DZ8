@@ -17,4 +17,15 @@ public class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    void findMaxNegative() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {-3, -5, -8, -4, -5, -1, -8, -6, -11, -11, -12};
+        long expected = -1;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
 }
